@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hacker Mode</title>
+    <style>
+        body {
+            background: black;
+            color: lime;
+            font-family: monospace;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        #screen {
+            white-space: pre-line;
+            font-size: 20px;
+        }
+        
+        #funny {
+            display: none;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>তোমার ফোন হ্যাক হচ্ছে।
+
+    </h1>
+    <div id="screen"></div>
+
+    <div id="funny">
+        <h1>😂 Gotcha! It's Just a Prank!</h1>
+        <img src="https://i.imgur.com/7rXf4dX.gif" alt="Funny GIF" width="400">
+    </div>
+
+    <script>
+        // সব line এক সাথে দেখানোর জন্য
+        let lines = [
+            "Connecting to server...",
+            "Access granted...",
+            "Scanning system files...",
+            "Downloading personal data...",
+            "Sending data to hacker...",
+            "Deleting system files...",
+            "Bypassing firewall...",
+            "Installing virus...",
+            "Encrypting files...",
+            "WARNING!!!"
+        ];
+
+        // Fast typing effect: 50ms per line
+        let i = 0;
+
+        function showLine() {
+            if (i < lines.length) {
+                document.getElementById("screen").innerHTML += lines[i] + "\n";
+                i++;
+                setTimeout(showLine, 50); // দ্রুত দেখাবে
+            }
+        }
+
+        showLine();
+
+        // 30 সেকেন্ড পরে funny prank দেখাবে
+        setTimeout(function() {
+            document.getElementById("screen").style.display = "none";
+            document.getElementById("funny").style.display = "block";
+        }, 5000); // 30,000ms = 30 seconds
+    </script>
+
+
+
+</body>
+
+</html>😂 ধরা খাইছো!”   
